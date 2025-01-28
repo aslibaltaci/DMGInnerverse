@@ -3,16 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void Play()
     {
         SceneManager.LoadScene("Level4");
     }
 
-    // Update is called once per frame
     public void Quit()
     {
         Application.Quit();
+
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

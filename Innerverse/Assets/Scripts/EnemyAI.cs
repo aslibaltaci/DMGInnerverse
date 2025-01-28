@@ -19,7 +19,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.LogWarning("Player object is null. EnemyAI will stop following.");
             return; // Exit Update if the player is null
         }
 
