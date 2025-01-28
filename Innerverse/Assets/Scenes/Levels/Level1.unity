@@ -6293,25 +6293,49 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2225226333466405933, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225226333466405933, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1616779084}
+    - target: {fileID: 2488065780556372707, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2488065780556372707, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1616779084}
     - target: {fileID: 3036647992536929831, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036647992536929831, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1616779084}
+    - target: {fileID: 3691548979210075059, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3691548979210075059, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1616779084}
     - target: {fileID: 6378025562370313409, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378025562370313409, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1616779084}
+    - target: {fileID: 7362147231357869775, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7362147231357869775, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
       value: 
@@ -6319,6 +6343,10 @@ PrefabInstance:
     - target: {fileID: 8633948519754774398, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_Name
       value: Fireflies
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845775035358629156, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
+      propertyPath: speed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8845775035358629156, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: player
