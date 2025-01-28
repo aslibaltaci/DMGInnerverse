@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class Level4Controller : MonoBehaviour
 {
-    public static SceneController instance;
+    public static Level4Controller instance;
     public Animator transition;
     public float transitionTime = 1f;
 
@@ -21,10 +21,7 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    public void OnPlayButtonClicked()
-    {
-        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    }
+
 
     public void NextLevel()
     {
