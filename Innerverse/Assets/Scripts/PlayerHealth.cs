@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         {
             isDestroyed = true;
             Destroy(gameObject);
-            
+            NextLevel();
         }
     }
 
@@ -75,6 +76,22 @@ public class PlayerHealth : MonoBehaviour
         else if (collision.gameObject.tag == "Enemy4")
         {
             audioPlayer.Play();
+        }
+    }
+
+    private void NextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.Log("No more levels to load. Returning to main menu.");
+            SceneManager.LoadScene(0);
         }
     }
 }   
