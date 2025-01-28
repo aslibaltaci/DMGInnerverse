@@ -251,6 +251,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3497857589530515195, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053797655}
+    - targetCorrespondingSourceObject: {fileID: 3497857589530515195, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053797656}
   m_SourcePrefab: {fileID: 100100000, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
 --- !u!1 &38776343
 GameObject:
@@ -4460,6 +4463,21 @@ MonoBehaviour:
   audioPlayer1: {fileID: 1034607248}
   audioPlayer2: {fileID: 1385906106}
   audioPlayer3: {fileID: 176135326}
+  flashEffect: {fileID: 2053797656}
+--- !u!114 &2053797656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885114183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172ca1497064e4d4c83eb5ef7d8f6fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 9c96301a4c9a50d4190670f5a070c7cf, type: 2}
+  duration: 0.15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

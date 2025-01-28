@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource audioPlayer2;
     public AudioSource audioPlayer3;
 
+    [SerializeField] private SimpleFlash flashEffect;
+
     private bool isDestroyed = false;
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDestroyed) return;
         health -= damage;
+        flashEffect.Flash();
 
         if (health < 0)
         {
