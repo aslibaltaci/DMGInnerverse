@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 20;
+    public int maxHealth = 30;
     public int health;
-    public VignetteController vignetteController;
+    public Image healthBar;
 
     public AudioSource audioPlayer;
     public AudioSource audioPlayer1;
@@ -21,25 +22,41 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        UpdateHealthBar();
     }
 
     public void TakeDamage(int damage)
     {
         if (isDestroyed) return;
+        
         health -= damage;
         flashEffect.Flash();
 
-        if (health < 0)
+        health = Mathf.Clamp(health, 0, maxHealth);
+
+        UpdateHealthBar();
+
+        if (health <= 0)
         {
             isDestroyed = true;
             Destroy(gameObject);
             
         }
-        if (vignetteController != null)
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar != null)
         {
-            vignetteController.TriggerVignette();
+            // Divide as float to avoid integer division
+            healthBar.fillAmount = (float)health / maxHealth;
+        }
+        else
+        {
+            Debug.LogError("HealthBar is not assigned in the Inspector!");
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDestroyed) return;
@@ -59,6 +76,5 @@ public class PlayerHealth : MonoBehaviour
         {
             audioPlayer.Play();
         }
-
     }
 }   
