@@ -18,6 +18,22 @@ public class SceneController : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    public void OnPlayButtonClicked()
+    {
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("PauseMenu");
+        }
+    }
+
+>>>>>>> Stashed changes
     public void NextLevel()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
