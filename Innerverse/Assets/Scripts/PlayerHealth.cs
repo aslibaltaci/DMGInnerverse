@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private SimpleFlash flashEffect;
 
+    private Dissolve dissolveEffect;
+
     private bool isDestroyed = false;
 
     // Start is called before the first frame update
@@ -24,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         UpdateHealthBar();
+
+        dissolveEffect = GetComponent<Dissolve>();
     }
 
     public void TakeDamage(int damage)

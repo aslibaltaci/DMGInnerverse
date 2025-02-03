@@ -25,7 +25,7 @@ public class Dissolve : MonoBehaviour
         }
     }
     
-    private IEnumerator Disappear(bool useDissolve, bool useVertical)
+    public IEnumerator Disappear(bool useDissolve, bool useVertical)
     {
         float elapsedTime = 0f;
         while (elapsedTime < _dissolveTime)
@@ -47,7 +47,7 @@ public class Dissolve : MonoBehaviour
         }
     }
 
-    private IEnumerator Appear(bool useDissolve, bool useVertical)
+    public IEnumerator Appear(bool useDissolve, bool useVertical)
     {
         float elapsedTime = 0f;
 
