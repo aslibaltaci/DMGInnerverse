@@ -198,6 +198,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5725069833349293749, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725069833349293749, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f29b0168229cc7f42904ee32fd4e716f, type: 2}
     - target: {fileID: 6069571522190670813, guid: e8ac5a2d21ae7844494482f86096efed, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -2095,7 +2103,7 @@ Transform:
   m_GameObject: {fileID: 988560590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.166662, y: -4.3509016, z: -10.078535}
+  m_LocalPosition: {x: -8.542911, y: -4.350802, z: -10.078535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
