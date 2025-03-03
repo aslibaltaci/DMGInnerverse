@@ -2428,7 +2428,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Run towards the light while avoiding the monsters, if you bump into them
-    they will absorb your color, once all you color is gone, you will die '
+    they will absorb you, once all your health is gone, you will die '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2d8e8ad3a86e8f47952bd1f6b63006a, type: 2}
   m_sharedMaterial: {fileID: -1378289313772762059, guid: c2d8e8ad3a86e8f47952bd1f6b63006a, type: 2}
