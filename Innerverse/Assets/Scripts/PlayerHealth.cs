@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isDestroyed = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
@@ -29,27 +28,36 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isDestroyed) return;
-        
+
         health -= damage;
         flashEffect.Flash();
-
         health = Mathf.Clamp(health, 0, maxHealth);
-
         UpdateHealthBar();
 
-        if (health <= 0)
+        if (health <= 0 && !isDestroyed)
         {
             isDestroyed = true;
-            Destroy(gameObject);
-            NextLevel();
+
+    
+            PlayerDissolve dissolveEffect = GetComponent<PlayerDissolve>();
+
+            if (dissolveEffect != null)
+            {
+                dissolveEffect.onDissolveComplete = NextLevel;
+            }
+            else
+            {
+                Debug.LogError("PlayerDissolve component missing!");
+                NextLevel();
+            }
         }
     }
+
 
     private void UpdateHealthBar()
     {
         if (healthBar != null)
         {
-            // Divide as float to avoid integer division
             healthBar.fillAmount = (float)health / maxHealth;
         }
         else
