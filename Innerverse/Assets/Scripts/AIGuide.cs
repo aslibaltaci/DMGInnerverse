@@ -1,7 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables; // Import Playables to check Timeline state
+using UnityEngine.Playables;
 
 public class AIGuide : MonoBehaviour
 {
@@ -13,25 +13,34 @@ public class AIGuide : MonoBehaviour
     public float stopDistance = 1.5f;
     public float wanderRadius = 1.5f;
     public float wanderSpeed = 1.5f;
+    public float jitterIntensity = 0.5f; // How much the fireflies jitter around
 
     private bool returningToPlayer = false;
     private bool isWandering = false;
     private Vector2 wanderTarget;
-    private PlayableDirector timeline; // Reference to Timeline
+    private PlayableDirector timeline;
+    private Vector2 jitterOffset;
 
     void Start()
     {
-        timeline = FindObjectOfType<PlayableDirector>(); // Find the Timeline in the scene
+        timeline = FindObjectOfType<PlayableDirector>();
+        StartCoroutine(UpdateJitter()); // Start jitter effect
     }
 
     void Update()
     {
-        // If a Timeline exists and is playing, do NOT interrupt AI movement
+        // 🔹 If Timeline exists & is playing, force movement
         if (timeline != null && timeline.state == PlayState.Playing)
         {
-            return; // Prevent Timeline from interfering
+            FollowPlayerDuringCutscene();
+            return;
         }
 
+        HandleNormalMovement();
+    }
+
+    void HandleNormalMovement()
+    {
         float playerDistance = Vector2.Distance(transform.position, player.transform.position);
         float targetDistance = Vector2.Distance(transform.position, targetLocation.position);
 
@@ -52,7 +61,7 @@ public class AIGuide : MonoBehaviour
         {
             if (!isWandering)
             {
-                StartCoroutine(WanderAroundPoint(playerDistance < followDistance ? player.transform.position : targetLocation.position));
+                StartCoroutine(WanderAroundPoint(player.transform.position));
             }
             return;
         }
@@ -62,6 +71,27 @@ public class AIGuide : MonoBehaviour
         if (targetDistance > stopDistance)
         {
             MoveTowards(moveTarget, speed);
+        }
+    }
+
+    // 🔹 NEW: Follow Player With Jitter Effect During Cutscene
+    void FollowPlayerDuringCutscene()
+    {
+        if (player == null) return;
+
+        float playerDistance = Vector2.Distance(transform.position, player.transform.position);
+
+        if (playerDistance > followDistance)
+        {
+            // Move towards the player normally
+            Vector2 direction = (player.transform.position - transform.position).normalized;
+            transform.position += (Vector3)(direction * speed * Time.deltaTime);
+        }
+        else
+        {
+            // 🔹 Jitter around the player
+            Vector2 jitterPosition = (Vector2)player.transform.position + jitterOffset;
+            transform.position = Vector2.Lerp(transform.position, jitterPosition, Time.deltaTime * wanderSpeed);
         }
     }
 
@@ -92,5 +122,15 @@ public class AIGuide : MonoBehaviour
         }
 
         isWandering = false;
+    }
+
+    // 🔹 NEW: Randomly Update Jitter Offset
+    private IEnumerator UpdateJitter()
+    {
+        while (true)
+        {
+            jitterOffset = Random.insideUnitCircle * jitterIntensity;
+            yield return new WaitForSeconds(0.2f); // Change jitter every 0.2s
+        }
     }
 }

@@ -281,11 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422811037066257610, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.95
+      value: -11.1
       objectReference: {fileID: 0}
     - target: {fileID: 2422811037066257610, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3
+      value: 7.54
       objectReference: {fileID: 0}
     - target: {fileID: 2422811037066257610, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -329,11 +329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236223074800419881, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4850998
+      value: -11.27
       objectReference: {fileID: 0}
     - target: {fileID: 3236223074800419881, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.09
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 3691548979210075059, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: speed
@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5147914497854026632, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0605
+      value: -11.43
       objectReference: {fileID: 0}
     - target: {fileID: 5147914497854026632, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6285758695460977780, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.69
+      value: 8.37
       objectReference: {fileID: 0}
     - target: {fileID: 6285758695460977780, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -413,11 +413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7669942815360423133, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 2.53
       objectReference: {fileID: 0}
     - target: {fileID: 7669942815360423133, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.97
+      value: 8.84
       objectReference: {fileID: 0}
     - target: {fileID: 8034671875136877969, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -433,11 +433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8034671875136877969, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.12
+      value: 5.35
       objectReference: {fileID: 0}
     - target: {fileID: 8034671875136877969, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.29
+      value: -10.93
       objectReference: {fileID: 0}
     - target: {fileID: 8223154591592457378, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -453,11 +453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223154591592457378, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.73
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 8223154591592457378, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2166
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 8633948519754774398, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       propertyPath: m_Name
@@ -485,12 +485,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 267753620582417072, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 73447920}
-    - targetCorrespondingSourceObject: {fileID: 267753620582417072, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 73447927}
-    - targetCorrespondingSourceObject: {fileID: 267753620582417072, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 73447926}
     - targetCorrespondingSourceObject: {fileID: 5723473394504121842, guid: 007ae61a7a4251c4d9d7ad12ef0c66c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 73447919}
@@ -559,12 +553,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!114 &73447917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,12 +574,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!114 &73447918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,12 +595,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!114 &73447919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,12 +616,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!114 &73447920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,52 +637,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
---- !u!95 &73447926
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73447915}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!320 &73447927
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73447915}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0767a9fee61217347a6f3260af3d3ffc, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4701518383741638342, guid: 0767a9fee61217347a6f3260af3d3ffc, type: 2}
-    value: {fileID: 73447926}
-  m_ExposedReferences:
-    m_References: []
+  jitterIntensity: 0.9
 --- !u!1 &90812573
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,12 +947,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!1 &305852642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,12 +1179,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 207152788}
   targetLocation: {fileID: 0}
-  speed: 3
+  speed: 0.8
   maxDistance: 7
   followDistance: 0.5
   stopDistance: 2
-  wanderRadius: 1.5
+  wanderRadius: 4.2
   wanderSpeed: 1.5
+  jitterIntensity: 0.9
 --- !u!1 &664866353
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,6 +6737,10 @@ PrefabInstance:
     - target: {fileID: 231688059330890166, guid: cffd057858079644681d69ae481311a2, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015598327677940103, guid: cffd057858079644681d69ae481311a2, type: 3}
+      propertyPath: transitionTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286982214862316686, guid: cffd057858079644681d69ae481311a2, type: 3}
       propertyPath: m_LocalPosition.x
