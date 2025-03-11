@@ -38,17 +38,18 @@ public class PlayerHealth : MonoBehaviour
         {
             isDestroyed = true;
 
-    
+            
             PlayerDissolve dissolveEffect = GetComponent<PlayerDissolve>();
 
             if (dissolveEffect != null)
             {
-                dissolveEffect.onDissolveComplete = NextLevel;
+                dissolveEffect.onDissolveComplete = NextLevel; 
+                dissolveEffect.StartDissolve(); 
             }
             else
             {
                 Debug.LogError("PlayerDissolve component missing!");
-                NextLevel();
+                NextLevel(); 
             }
         }
     }
@@ -102,4 +103,4 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-}   
+}
