@@ -13,7 +13,7 @@ public class AIGuide : MonoBehaviour
     public float stopDistance = 1.5f;
     public float wanderRadius = 1.5f;
     public float wanderSpeed = 1.5f;
-    public float jitterIntensity = 0.5f; // How much the fireflies jitter around
+    public float jitterIntensity = 0.5f;
 
     private bool returningToPlayer = false;
     private bool isWandering = false;
@@ -24,12 +24,11 @@ public class AIGuide : MonoBehaviour
     void Start()
     {
         timeline = FindObjectOfType<PlayableDirector>();
-        StartCoroutine(UpdateJitter()); // Start jitter effect
+        StartCoroutine(UpdateJitter()); 
     }
 
     void Update()
     {
-        // 🔹 If Timeline exists & is playing, force movement
         if (timeline != null && timeline.state == PlayState.Playing)
         {
             FollowPlayerDuringCutscene();
@@ -74,7 +73,6 @@ public class AIGuide : MonoBehaviour
         }
     }
 
-    // 🔹 NEW: Follow Player With Jitter Effect During Cutscene
     void FollowPlayerDuringCutscene()
     {
         if (player == null) return;
@@ -83,13 +81,11 @@ public class AIGuide : MonoBehaviour
 
         if (playerDistance > followDistance)
         {
-            // Move towards the player normally
             Vector2 direction = (player.transform.position - transform.position).normalized;
             transform.position += (Vector3)(direction * speed * Time.deltaTime);
         }
         else
         {
-            // 🔹 Jitter around the player
             Vector2 jitterPosition = (Vector2)player.transform.position + jitterOffset;
             transform.position = Vector2.Lerp(transform.position, jitterPosition, Time.deltaTime * wanderSpeed);
         }
@@ -124,13 +120,12 @@ public class AIGuide : MonoBehaviour
         isWandering = false;
     }
 
-    // 🔹 NEW: Randomly Update Jitter Offset
     private IEnumerator UpdateJitter()
     {
         while (true)
         {
             jitterOffset = Random.insideUnitCircle * jitterIntensity;
-            yield return new WaitForSeconds(0.2f); // Change jitter every 0.2s
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }
