@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables; // Import Playables to check Timeline state
 
 public class AIGuide : MonoBehaviour
 {
@@ -16,9 +17,21 @@ public class AIGuide : MonoBehaviour
     private bool returningToPlayer = false;
     private bool isWandering = false;
     private Vector2 wanderTarget;
+    private PlayableDirector timeline; // Reference to Timeline
+
+    void Start()
+    {
+        timeline = FindObjectOfType<PlayableDirector>(); // Find the Timeline in the scene
+    }
 
     void Update()
     {
+        // If a Timeline exists and is playing, do NOT interrupt AI movement
+        if (timeline != null && timeline.state == PlayState.Playing)
+        {
+            return; // Prevent Timeline from interfering
+        }
+
         float playerDistance = Vector2.Distance(transform.position, player.transform.position);
         float targetDistance = Vector2.Distance(transform.position, targetLocation.position);
 
