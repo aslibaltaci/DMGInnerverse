@@ -10,6 +10,7 @@ TagManager:
   - Enemy3
   - Enemy4
   - Consumable
+  - Key
   layers:
   - Default
   - TransparentFX

@@ -3,14 +3,14 @@ using System.Collections;
 
 public class ConsumeObject : MonoBehaviour
 {
-    private GameObject consumableObject; // Stores the object the player is colliding with
+    private GameObject consumableObject; 
 
     void Update()
     {
         if (consumableObject != null && Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(ShrinkAndDestroy(consumableObject));
-            consumableObject = null; // Clear reference after consuming
+            consumableObject = null; 
         }
     }
 
@@ -18,7 +18,7 @@ public class ConsumeObject : MonoBehaviour
     {
         if (collision.CompareTag("Consumable"))
         {
-            consumableObject = collision.gameObject; // Store the object
+            consumableObject = collision.gameObject; 
         }
     }
 
@@ -26,7 +26,7 @@ public class ConsumeObject : MonoBehaviour
     {
         if (collision.gameObject == consumableObject)
         {
-            consumableObject = null; // Clear reference when leaving
+            consumableObject = null;
         }
     }
 
