@@ -24556,7 +24556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b02ea3ff67f2d40933c4ce57772c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSprites: 26
+  totalSprites: 28
   blocker: {fileID: 760694324}
   musicSource: {fileID: 1058557678}
 --- !u!4 &1247670138
