@@ -13,7 +13,13 @@ public class ChangeSpriteOnTrigger : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        manager = FindObjectOfType<SpriteChangeManager>(); // Find manager
+
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("Error: SpriteRenderer is missing on " + gameObject.name);
+        }
+
+        manager = FindObjectOfType<SpriteChangeManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -24,9 +30,15 @@ public class ChangeSpriteOnTrigger : MonoBehaviour
         }
     }
 
-    IEnumerator FadeToNewSprite()
+    public IEnumerator FadeToNewSprite()
     {
-        hasChanged = true; 
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("Error: SpriteRenderer is missing on " + gameObject.name);
+            yield break; // Stop the coroutine if there's no SpriteRenderer
+        }
+
+        hasChanged = true;
         float elapsedTime = 0f;
         Color color = spriteRenderer.color;
 
@@ -52,6 +64,6 @@ public class ChangeSpriteOnTrigger : MonoBehaviour
         color.a = 1f;
         spriteRenderer.color = color;
 
-        manager.NotifySpriteChanged(); 
+        manager.NotifySpriteChanged();
     }
 }

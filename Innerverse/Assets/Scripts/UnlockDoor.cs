@@ -5,6 +5,21 @@ using UnityEngine;
 public class UnlockDoor : MonoBehaviour
 {
     private bool isPlayerNear = false;
+    private ChangeSpriteOnTrigger changeSprite;
+
+    void Start()
+    {
+        changeSprite = GetComponentInChildren<ChangeSpriteOnTrigger>();
+
+        if (changeSprite == null)
+        {
+            Debug.LogError("Error: ChangeSpriteOnTrigger not found on " + gameObject.name);
+        }
+        else
+        {
+            Debug.Log("ChangeSpriteOnTrigger found on " + gameObject.name);
+        }
+    }
 
     void Update()
     {
@@ -42,6 +57,15 @@ public class UnlockDoor : MonoBehaviour
     void OpenDoor()
     {
         Debug.Log("Door Unlocked!");
-        
+
+        if (changeSprite != null)
+        {
+            Debug.Log("Calling FadeToNewSprite on " + gameObject.name);
+            StartCoroutine(changeSprite.FadeToNewSprite());
+        }
+        else
+        {
+            Debug.LogError("Error: ChangeSpriteOnTrigger reference is null in UnlockDoor!");
+        }
     }
 }
