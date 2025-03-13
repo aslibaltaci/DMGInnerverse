@@ -38,14 +38,14 @@ public class SceneController : MonoBehaviour
 
     }
 
-    IEnumerator NextLevel(int levelIndex)
+    public IEnumerator NextLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadSceneAsync(levelIndex);
     }
 
-    IEnumerator LoadSceneCoroutine(string sceneName)
+    public IEnumerator LoadSceneCoroutine(string sceneName)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);

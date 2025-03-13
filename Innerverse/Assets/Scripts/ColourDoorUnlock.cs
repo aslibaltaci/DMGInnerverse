@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoorUnlock : MonoBehaviour
 {
-    public Sprite unlockedSprite; // Assign the colored door sprite in Inspector
+    public Sprite unlockedSprite;
 
     private SpriteRenderer spriteRenderer;
 
@@ -10,27 +10,26 @@ public class DoorUnlock : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Make sure the door starts with its original sprite
         if (spriteRenderer.sprite == null)
         {
             Debug.LogError("?? Door's SpriteRenderer has no sprite assigned! Set the greyscale/outline sprite.");
         }
 
-        SpriteChangeManager.OnAllSpritesChanged += UnlockDoor;
+        FindObjectOfType<SpriteChangeManager>().NotifySpriteChanged();
     }
 
     void OnDestroy()
     {
-        SpriteChangeManager.OnAllSpritesChanged -= UnlockDoor;
+        //SpriteChangeManager.OnAllSpritesChanged -= UnlockDoor;
     }
 
-    void UnlockDoor()
+    public void UnlockDoor()
     {
         Debug.Log("?? Door unlocked! Changing sprite...");
 
         if (spriteRenderer != null && unlockedSprite != null)
         {
-            spriteRenderer.sprite = unlockedSprite; // Swap to the colored sprite
+            spriteRenderer.sprite = unlockedSprite;
         }
         else
         {

@@ -6,9 +6,9 @@ public class ConsumeObject : MonoBehaviour
     private GameObject consumableObject;
     public ConsumptionBar consumptionBar;
     private int collectedObjects = 0;
-    public int maxObjects = 20; // Now set to 20
-    public BoxCollider2D doorBlocker; // Assign in Inspector
-    public PlayerInventory playerInventory; // Reference to track the key
+    public int maxObjects = 20; 
+    public BoxCollider2D doorBlocker; 
+    public PlayerInventory playerInventory; 
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class ConsumeObject : MonoBehaviour
             collectedObjects++;
             consumptionBar.UpdateBar(collectedObjects, maxObjects);
 
-            // Check if both key and maxObjects are collected
+     
             CheckUnlockConditions();
         }
     }
@@ -72,7 +72,7 @@ public class ConsumeObject : MonoBehaviour
         {
             if (doorBlocker != null)
             {
-                doorBlocker.enabled = false; // Disable the blocking collider
+                doorBlocker.enabled = false; 
                 Debug.Log("Door Blocker Removed!");
             }
             else

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class ChangeSpriteOnTrigger : MonoBehaviour
 {
-    public Sprite newSprite; // Assign in Inspector
-    public float fadeDuration = 1f; // Adjust fade speed
+    public Sprite newSprite;
+    public float fadeDuration = 1f;
 
     private SpriteRenderer spriteRenderer;
-    private bool hasChanged = false; // Prevents multiple triggers
-    private SpriteChangeManager manager; // Reference to the manager
+    private bool hasChanged = false;
+    private SpriteChangeManager manager;
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class ChangeSpriteOnTrigger : MonoBehaviour
         if (spriteRenderer == null)
         {
             Debug.LogError("Error: SpriteRenderer is missing on " + gameObject.name);
-            yield break; // Stop the coroutine if there's no SpriteRenderer
+            yield break;
         }
 
         hasChanged = true;

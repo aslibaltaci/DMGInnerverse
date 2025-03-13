@@ -1,25 +1,48 @@
 ﻿using UnityEngine;
-using System;
 
 public class SpriteChangeManager : MonoBehaviour
 {
-    private ChangeSpriteOnTrigger[] allSprites;
-    private int changedCount = 0;
-
-    public static event Action OnAllSpritesChanged;
-
-    void Start()
-    {
-        allSprites = FindObjectsOfType<ChangeSpriteOnTrigger>();
-    }
+    public int totalSprites;
+    private int changedSprites = 0; 
+    public BoxCollider2D blocker;
+    public AudioSource musicSource; 
 
     public void NotifySpriteChanged()
     {
-        changedCount++; 
-        if (changedCount >= allSprites.Length)
+        changedSprites++;
+        Debug.Log($"Sprite changed: {changedSprites}/{totalSprites}");
+
+        if (changedSprites >= totalSprites)
         {
-            Debug.Log("✅ All sprites changed! Triggering event.");
-            OnAllSpritesChanged?.Invoke(); 
+            UnlockArea();
+            PlayMusic();
         }
     }
+
+    void UnlockArea()
+    {
+        if (blocker != null)
+        {
+            Debug.Log("All sprites changed! Removing box collider.");
+            blocker.enabled = false; 
+        }
+        else
+        {
+            Debug.LogError("No BoxCollider assigned to SpriteChangeManager!");
+        }
+    }
+
+    public void PlayMusic()
+    {
+        if (musicSource != null && !musicSource.isPlaying)  
+        {
+            musicSource.Play();
+            Debug.Log("Music started playing!");
+        }
+        else if (musicSource == null)
+        {
+            Debug.LogError("Music Source is not assigned!");
+        }
+    }
+
 }
