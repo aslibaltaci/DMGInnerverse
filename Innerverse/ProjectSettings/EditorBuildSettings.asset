@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level3.unity
     guid: bc6b741ab02e776479eae0fd66798177
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/FinalCutscene.unity
+    guid: a193366c6f9965244b449c5089685b4f
   - enabled: 0
     path: Assets/Scenes/Levels/SpawnLevel.unity
     guid: b52698293f6217043b9738f002fd455c

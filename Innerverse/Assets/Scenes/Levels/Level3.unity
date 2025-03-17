@@ -12585,7 +12585,7 @@ Transform:
   m_GameObject: {fileID: 545754531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.558832, y: -8.083872, z: -10.078535}
+  m_LocalPosition: {x: -22.894281, y: -8.084942, z: -10.078535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40624,7 +40624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168304634091190510, guid: e8e615fb5316cd047909845f322d21e1, type: 3}
       propertyPath: levelName
-      value: Level2
+      value: EndCutscene
       objectReference: {fileID: 0}
     - target: {fileID: 1168304634091190510, guid: e8e615fb5316cd047909845f322d21e1, type: 3}
       propertyPath: goNextLevel
